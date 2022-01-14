@@ -40,7 +40,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-warning sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
@@ -154,7 +154,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated animated--grow-in" aria-labelledby="userDropdown">
                                 <div class="dropdown-divider"></div>
-                                <button class="dropdown dropdown-item btn-user btn-danger" type="submit" data-toggle="modal" data-target="#logoutModal">
+                                <button class="dropdown dropdown-item btn-user btn-warning" type="submit" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </button>
@@ -231,7 +231,7 @@
                     <form action="{{ route('logout') }}" method="post">
                     @method('post')
                     @csrf
-                    <button class="btn btn-danger" type="submit"><i class="fas fa-sm fa-fw fa-sign-out-alt text-white-50"></i> Logout</button>
+                    <button class="btn btn-warning" type="submit"><i class="fas fa-sm fa-fw fa-sign-out-alt text-white-50"></i> Logout</button>
                     </form>
                 </div>
             </div>
