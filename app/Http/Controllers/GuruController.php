@@ -27,7 +27,7 @@ class GuruController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.guru.create');
     }
 
     /**
@@ -49,7 +49,9 @@ class GuruController extends Controller
      */
     public function show(Guru $guru)
     {
-        //
+        return view('admin.guru.show',[
+            'gurus' => Guru::find($guru)
+        ]);
     }
 
     /**
@@ -60,7 +62,9 @@ class GuruController extends Controller
      */
     public function edit(Guru $guru)
     {
-        //
+        return view('admin.guru.edit',[
+            'gurus' => Guru::find($guru)
+        ]);
     }
 
     /**
