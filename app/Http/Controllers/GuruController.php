@@ -38,7 +38,16 @@ class GuruController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validate = $request->validate([
+            'nama' => 'required|max:255',
+            'nip' => 'required',
+            'alamat' => 'required'
+        ]);
+
+        $validate['user_id'] = auth()->user()->id;
+
+        Guru::create($validate);
+        return redirect('/guru')->with('success','Added Successfully!');
     }
 
     /**
@@ -76,7 +85,15 @@ class GuruController extends Controller
      */
     public function update(Request $request, Guru $guru)
     {
-        //
+        $rules = [
+            'nama' => 'required|max:255',
+            'nip' => 'required',
+            'alamat' => 'required'
+        ];
+
+        $validate = $request->validate($rules);
+        Guru::where('id',$guru->id)->update($validate);
+        return redirect('/guru')->with('success','Updated Successfully!');
     }
 
     /**

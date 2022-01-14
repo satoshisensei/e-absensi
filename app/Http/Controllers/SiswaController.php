@@ -38,7 +38,16 @@ class SiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validate = $request->validate([
+            'nama' => 'required|max:255',
+            'nis' => 'required',
+            'alamat' => 'required'
+        ]);
+
+        $validate['user_id'] = auth()->user()->id;
+
+        Siswa::create($validate);
+        return redirect('/siswa')->with('success','Added Successfully!');
     }
 
     /**
@@ -76,7 +85,15 @@ class SiswaController extends Controller
      */
     public function update(Request $request, Siswa $siswa)
     {
-        //
+        $rules = [
+            'nama' => 'required|max:255',
+            'nis' => 'required',
+            'alamat' => 'required'
+        ];
+
+        $validate = $request->validate($rules);
+        Siswa::where('id',$siswa->id)->update($validate);
+        return redirect('/siswa')->with('success','Updated Successfully!');
     }
 
     /**
