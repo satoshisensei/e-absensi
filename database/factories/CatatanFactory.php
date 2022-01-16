@@ -14,7 +14,9 @@ class CatatanFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'siswa_id' => mt_rand(1,50),
+            'tanggal' => $this->faker->date(),
+            'kegiatan' => $this->faker->sentence(2, true)
         ];
     }
 }

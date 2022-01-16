@@ -16,7 +16,7 @@ class CreateCatatansTable extends Migration
         Schema::create('catatans', function (Blueprint $table) {
             $table->id();
             $table->foreignId('siswa_id');
-            $table->dateTimeTz('tanggal');
+            $table->date('tanggal');
             $table->string('kegiatan');
             $table->timestamps();
         });

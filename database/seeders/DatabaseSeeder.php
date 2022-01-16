@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use Database\Seeders\GuruSeeder;
 use Database\Seeders\UserSeeder;
 use Database\Seeders\SiswaSeeder;
+use Database\Seeders\CatatanSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,7 +22,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             GuruSeeder::class,
-            SiswaSeeder::class
+            SiswaSeeder::class,
+            CatatanSeeder::class
         ]);
     }
 }

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\CatatanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,12 +26,12 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth'])->group(function () {
-    // Data Dasar
     Route::resource('/guru', GuruController::class);
     Route::get('/dataguru',[GuruController::class, 'data'])->name('guru-data');
 
     Route::resource('/siswa', SiswaController::class);
     Route::get('/datasiswa',[SiswaController::class, 'data'])->name('siswa-data');
 
-    // Data Tambahan
+    Route::resource('/catatan', CatatanController::class);
+    Route::get('/datacatatan',[CatatanController::class, 'data'])->name('catatan-data');
 });
