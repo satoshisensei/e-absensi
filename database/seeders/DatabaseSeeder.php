@@ -5,7 +5,9 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Database\Seeders\GuruSeeder;
 use Database\Seeders\UserSeeder;
+use Database\Seeders\MasukSeeder;
 use Database\Seeders\SiswaSeeder;
+use Database\Seeders\KeluarSeeder;
 use Database\Seeders\CatatanSeeder;
 
 class DatabaseSeeder extends Seeder
@@ -23,7 +25,10 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             GuruSeeder::class,
             SiswaSeeder::class,
-            CatatanSeeder::class
+            AbsensiSeeder::class,
+            CatatanSeeder::class,
+            MasukSeeder::class,
+            KeluarSeeder::class
         ]);
     }
 }

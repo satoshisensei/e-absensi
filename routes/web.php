@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\AbsensiController;
 use App\Http\Controllers\CatatanController;
 
 /*
@@ -34,4 +35,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('/catatan', CatatanController::class);
     Route::get('/datacatatan',[CatatanController::class, 'data'])->name('catatan-data');
+
+    Route::resource('/absensi', AbsensiController::class);
+    Route::get('/dataabsensi',[AbsensiController::class, 'data'])->name('absensi-data');
 });
