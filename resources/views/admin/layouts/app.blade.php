@@ -87,7 +87,7 @@
             <!-- Nav Item - Koleksi Daftar Siswa Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="/siswa">
-                    <i class="fas fa-fw fa-user"></i>
+                    <i class="fas fa-fw fa-user-tie"></i>
                     <span>Daftar Siswa</span>
                 </a>
             </li>
@@ -97,7 +97,7 @@
             <!-- Nav Item - Koleksi Daftar Guru Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="/guru">
-                    <i class="fas fa-fw fa-user-tie"></i>
+                    <i class="fas fa-fw fa-user-injured"></i>
                     <span>Daftar Guru</span>
                 </a>
             </li>
@@ -173,7 +173,7 @@
 
                     </div>
 
-                    <div class="row container container-fluid">
+                    <div class="row container container-fluid d-flex justify-content-center">
                         @yield('container')
                     </div>
 
