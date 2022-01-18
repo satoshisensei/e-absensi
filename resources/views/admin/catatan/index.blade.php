@@ -30,12 +30,13 @@
                     <td>{!! $catatan->kegiatan !!}</td>
                     <td>
                         <a href="/catatan/{{ $catatan->id }}" class="btn btn-info"><i class="fas fa-eye"></i></a>|
-                        <a href="/catatan/{{ $catatan->id }}/edit" class="btn btn-warning"><i class="fas fa-edit"></i></a>|
+                        <a href="/catatan/{{ $catatan->id }}/edit" class="btn btn-warning"><i class="fas fa-edit"></i></a>@can('admin')|
                         <form action="/catatan/{{ $catatan->id }}" method="post" class="d-inline">
                             @method('delete')
                             @csrf
                             <button class="btn btn-danger border-0" onclick="confirm('Are you sure?')"><i class="fas fa-trash"></i></button>
                         </form>
+                        @endcan
                     </td>
                 </tr>
                 @endforeach

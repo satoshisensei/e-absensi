@@ -6,6 +6,7 @@ use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\AbsensiController;
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CatatanController;
 
 /*
@@ -20,13 +21,14 @@ use App\Http\Controllers\CatatanController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 
 Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth'])->group(function () {
+    // Data Dasar
     Route::resource('/guru', GuruController::class);
     Route::get('/dataguru',[GuruController::class, 'data'])->name('guru-data');
 
@@ -38,4 +40,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('/absensi', AbsensiController::class);
     Route::get('/dataabsensi',[AbsensiController::class, 'data'])->name('absensi-data');
+
+    // Data Tambahan
+    Route::resource('/account', AccountController::class)->only('index','edit','update');
+    Route::get('/dataaccount',[AccountController::class, 'data'])->name('account-data');
 });

@@ -2,7 +2,7 @@
 
 @section('container')
     <div class="container container-fluid mb-3 d-flex justify-content-center">
-        <h2 class="h3 text-uppercase">Create Data</h2>
+        <h2 class="h3 text-uppercase">Edit Data</h2>
     </div>
     <div class="container container-fluid d-flex justify-content-center">
         <div class="col-md-8 ">
@@ -31,7 +31,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="tanggal" class="form-label">Tanggal</label>
-                            <input type="date" class="form-control @error('tanggal')
+                            <input type="datetime-local" class="form-control @error('tanggal')
                                 is-invalid
                             @enderror" id="tanggal" name="tanggal" placeholder="Masukan Tanggal..." required value="{{ old('tanggal',$catatans[0]->tanggal) }}">
                             @error('tanggal')

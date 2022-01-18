@@ -19,6 +19,16 @@ class Absensi extends Model
     ];
 
     /**
+     * Get the siswa that owns the Absensi
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function siswa(): BelongsTo
+    {
+        return $this->belongsTo(Siswa::class);
+    }
+
+    /**
      * Get the masuk that owns the Absensi
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

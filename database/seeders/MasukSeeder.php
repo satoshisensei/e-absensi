@@ -15,9 +15,9 @@ class MasukSeeder extends Seeder
     public function run()
     {
         $masuk = [
-            'menunggu',
-            'konfirmasi',
-            'ditolak'
+            'Menunggu',
+            'Dikonfirmasi',
+            'Ditolak'
         ];
 
         foreach($masuk as $item){

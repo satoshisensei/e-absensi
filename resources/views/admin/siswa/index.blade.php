@@ -30,12 +30,13 @@
                     <td>{!! $siswa->alamat !!}</td>
                     <td>
                         <a href="/siswa/{{ $siswa->id }}" class="btn btn-info"><i class="fas fa-eye"></i></a>|
-                        <a href="/siswa/{{ $siswa->id }}/edit" class="btn btn-warning"><i class="fas fa-edit"></i></a>|
+                        <a href="/siswa/{{ $siswa->id }}/edit" class="btn btn-warning"><i class="fas fa-edit"></i></a>@can('admin')|
                         <form action="/siswa/{{ $siswa->id }}" method="post" class="d-inline">
                             @method('delete')
                             @csrf
                             <button class="btn btn-danger border-0" onclick="confirm('Are you sure?')"><i class="fas fa-trash"></i></button>
                         </form>
+                        @endcan
                     </td>
                 </tr>
                 @endforeach

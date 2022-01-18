@@ -92,6 +92,8 @@
                 </a>
             </li>
 
+            @can('admin')
+
             <!-- Nav Item - Koleksi Daftar Guru Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="/guru">
@@ -99,22 +101,10 @@
                     <span>Daftar Guru</span>
                 </a>
             </li>
-
+            @endcan
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Data Tambahan
-            </div>
-
-            <!-- Nav Item - Ubah Kata Sandi Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="/account">
-                    <i class="fas fa-fw fa-book"></i>
-                    <span>Ubah Kata Sandi</span></a>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

@@ -30,7 +30,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="tanggal" class="form-label">Tanggal</label>
-                            <input type="date" class="form-control @error('tanggal')
+                            <input type="datetime-local" class="form-control @error('tanggal')
                                 is-invalid
                             @enderror" id="tanggal" name="tanggal" placeholder="Masukan Tanggal..." required value="{{ old('tanggal') }}">
                             @error('tanggal')
