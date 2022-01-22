@@ -24,11 +24,11 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="nip" class="form-label">Nip</label>
+                            <label for="nis" class="form-label">Nis</label>
                             <input type="text" class="form-control @error('nis')
                                 is-invalid
-                            @enderror" id="nip" name="nip" placeholder="Masukan Nis..." required value="{{ old('nis',$siswas[0]->nis) }}">
-                            @error('nip')
+                            @enderror" id="nis" name="nis" placeholder="Masukan Nis..." required value="{{ old('nis',$siswas[0]->nis) }}">
+                            @error('nis')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
