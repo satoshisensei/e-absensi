@@ -40,8 +40,4 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('/absensi', AbsensiController::class);
     Route::get('/dataabsensi',[AbsensiController::class, 'data'])->name('absensi-data');
-
-    // Data Tambahan
-    Route::resource('/account', AccountController::class)->only('index','edit','update');
-    Route::get('/dataaccount',[AccountController::class, 'data'])->name('account-data');
 });
